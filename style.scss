@@ -1,0 +1,124 @@
+---
+---
+
+//
+// IMPORTS
+//
+@import "variables";
+@import "bulma";
+//@import "reset";
+
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+
+/*hr{
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #aaa -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: dotted none none;
+    border-width: 1px 0 0;
+    box-sizing: content-box;
+    height: 0;
+}*/
+    
+    
+    
+    
+/**************/
+/* index     */
+/**************/
+
+
+/**************/
+/* Footer     */
+/**************/
+
+.footer{
+	border-top: solid 1px $mi-pink;
+	
+	.menu-list{
+		a{
+			padding-left: 0;
+			font-size: $bfs * 0.6;
+		}
+	}
+}
+
+/**************/
+/* Content    */
+/**************/
+
+.section{
+	padding-top: $bfs;
+}
+
+.section:nth-of-type(2){
+	padding-top: $bfs *2;
+}
+
+.content{
+	ul{
+		margin-left: 1em;
+	}
+	
+	dt {
+		display: block;
+		float: left;
+		min-width: 10px;
+		padding: $bfs /4 0;
+		font-weight: bold;
+		color: $info;
+	}
+	
+	dd{
+		border-bottom: solid 1px $grey-light;
+		padding: $bfs /4 0;
+		
+	}
+	
+	dt::after{
+		content: ":";
+		display: inline-block;
+		padding-right: $bfs /4;
+	}
+}
+
+#selbstbericht{
+	
+	counter-reset: h1counter;
+    
+    h1{
+	    counter-increment: h1counter;
+	    counter-reset: h2counter; 
+	    &:before{ content: counter(h1counter) ".\0000a0"; }
+    }
+    
+    h2{
+		counter-increment: h2counter;
+		counter-reset: h3counter;
+		&:before{ content: counter(h1counter) "." counter(h2counter) ".\0000a0"; }
+    }
+    
+    h3{
+		counter-increment: h3counter;
+		&:before{ content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0"; }
+    }
+
+}
+
+.toc{
+	border-left: solid 1px $mi-pink;
+}
+
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";
