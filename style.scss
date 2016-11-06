@@ -32,16 +32,35 @@
     
     
 /**************/
-/* index     */
+/* Hero     */
 /**************/
 
+.hero-bg{
+	
+	position: relative;
+	overflow: hidden;
+	
+	background-color: rgba(196,89,19,1) !important;
+	
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		right: -10px;
+		bottom: -10px;
+		background: linear-gradient( rgba(196,89,19, 0.7),  rgba(196,89,19, 0.7) ), url(/images/Kaltgang.jpg);
+		background-size: cover;
+		filter: blur(2px);
+	}
+}
 
 /**************/
 /* Footer     */
 /**************/
 
 .footer{
-	border-top: solid 1px $mi-pink;
+	border-top: solid 1px $primary;
 	
 	.menu-list{
 		a{
@@ -114,7 +133,7 @@
 }
 
 .toc{
-	border-left: solid 1px $mi-pink;
+	border-left: solid 1px $primary;
 }
 
 

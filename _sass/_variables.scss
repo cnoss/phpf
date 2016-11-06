@@ -4,16 +4,18 @@
 //
 
 // Colors
-$mi-blau: #4952e1;
-$mi-pink: #dd1166;
-$mi-gruen: #00AD2F;
-$mi-lila: #9313ce;
-$mi-black: #231f20;
+$phpf-blau: #305384;
+$phpf-rot: #B73042;
+$phpf-lila: #7E3084;
+$phpf-orange: #C45913;
+$phpf-gruen: #B7B230;
 
 $family-primary: "PT Sans";
-$primary:  $mi-pink;
-$info:     $mi-lila;
-$success:  $mi-gruen;
+$primary:  $phpf-blau;
+$info:     $phpf-gruen;
+$success:  $phpf-lila;
+$warning:  $phpf-orange;
+$danger:	$phpf-rot;
 
-$bfs: 1.2rem;
+$bfs: 1.5rem;
 $size-normal: $bfs;

@@ -6,7 +6,7 @@
 name: PHPfriends
 
 # Short bio or description (displayed in the header)
-description: Entwurf für PHPfriends
+description: Webhosting für jeden
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/th-koeln/mi-2017/master/images/box.png
@@ -86,30 +86,13 @@ exclude:
   - CNAME
 
 collections:
-  modulbeschreibungen-bachelor:
+  snippets:
     output: true
-  modulbeschreibungen-master:
-    output: true
-  selbstbericht:
-    layout: selbstbericht
-    
     
 defaults:
   - 
     scope:
       path: ""
-      type: modulbeschreibungen-bachelor
+      type: snippets
     values:
-      layout: modulbeschreibung
-  - 
-    scope:
-      path: ""
-      type: modulbeschreibungen-master
-    values:
-      layout: modulbeschreibung
-  - 
-    scope:
-      path: "selbstbericht"
-      type: selbstbericht
-    values:
-      layout: selbstbericht
+      layout: snippet
